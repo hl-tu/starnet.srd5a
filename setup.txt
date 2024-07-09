@@ -10,12 +10,16 @@ using IJulia
 notebook()
 
 # install packages
+pwd()
 using Pkg
 Pkg.add("DrWatson")
 Pkg.add("DataFrames")
 Pkg.add("Arrow")
 Pkg.add("BioFindr")
 Pkg.add("CSV")
+Pkg.add("AWSS3")
+Pkg.activate(".")
+Pkg.instantiate()
 
 # in notebook set up the environment
 using DrWatson
@@ -24,3 +28,5 @@ using Arrow
 using BioFindr
 using CSV
 quickactivate(@__DIR__)
+
+### R notebook
